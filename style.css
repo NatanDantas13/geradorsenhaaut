@@ -1,0 +1,162 @@
+
+*{
+    font-family: sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #181818;
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.logo{
+    max-width: 150px;
+    height: auto;
+    margin-top: 8px;
+
+}
+
+.container-input{
+    max-width: 480px;
+    margin: 14px 0;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.container-input span{
+    color: #fff;
+    font-size: 25px;   
+
+}
+
+.slider{
+    width: 100%;
+    border-radius: 5px;
+    background: #dfdfdf;
+    height: 18px;
+    outline: none;
+    margin-top: 8px;
+    
+}
+
+
+
+.container-password hide{
+    width: 100%;
+    border-radius: 5px;
+    background: #dfdfdf;
+    height: 18px;
+    outline: none;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.container-password{
+    max-width: 480px;
+    margin: 14px 0;
+    display: flex;
+    text-align: center;
+    color: #fff;
+    flex-direction: column; 
+    cursor: pointer;
+}
+
+
+.title{
+    font-size: 20px;
+    margin: 20px;
+
+}
+
+.button-cta{
+    height: 40px; /*Ajustar a altura*/
+    background-color: #3eb72b; /*Adicionar cor no botão gerar senha*/
+    border: 0; /*removemos a borda*/
+    border-radius: 8px; /*Adicinamos aredontamento no botão*/
+    cursor: pointer; /*Aplicamos para quando "passar" o mouse por cima, ficar com o aspectp de click*/
+    margin-top: 40px; /*Espaçamento do botão entre outros elementos, uma margem*/
+    color: #fff; /*cor do texto*/
+    font-weight: bold; /*adicionando uma classificação de expessura da fonte*/
+    font-size: 20px; /*Aumentar o tamanho da fonte*/
+}
+
+.password{
+    height: 60px;
+    background-color: rgba(0,0,0.92);
+    border-radius: 8px;
+    display: flex; /*Display: flex, Justify-content, Align items para centralizar a senha no meio*/
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: transform 0.5s; /*Adiciona um efeito mais suave no zomm*/
+}
+
+.password:hover{
+    transform: scale(1.05); /*Efeito para dar zoom no botão e adiciona a escala mais ou menos zoom*/
+}
+
+.tooltip{
+    position: relative;
+    border-radius: 8px;
+    top: 20px; /*adiciona uma margim para o elemento de cima*/
+    padding: 6px 8px; /*altera um espaçamento leve*/
+    background-color: rgba(0,0,0.92);
+    border: 1px solid #fff;
+    visibility: hidden; /*Tira a visibilidade desse container o tempo inteiro, aparece somente quando gera a senha*/
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.hide{
+    display: none; /*Essa clase define deixar fora o Designer, enquanto não gera*/
+}
+
+.container-password:hover .tooltip{
+    visibility: visible; /*Essa função aplica o aparecimento da informação clique para copiar*/
+    bottom: 50px;
+    opacity: 1;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 480px) {
+    body {
+        padding: 50px; /* Padding ao redor do conteúdo */
+    }
+
+    .logo {
+        max-width: 100px; /* Reduz o tamanho da logo */
+    }
+
+    .container-input {
+        width: 100%; /* Ocupa 100% da largura */
+        margin: 10px 0; /* Ajusta a margem */
+    }
+
+    .slider {
+        height: 15px; /* Ajusta a altura do slider */
+    }
+
+    .button-cta {
+        width: 100%; /* Ocupa toda a largura */
+        font-size: 18px; /* Ajusta o tamanho da fonte */
+    }
+
+    .title {
+        font-size: 18px; /* Ajusta o tamanho do título */
+    }
+
+    .password {
+        height: 50px; /* Ajusta a altura da senha */
+    }
+}
